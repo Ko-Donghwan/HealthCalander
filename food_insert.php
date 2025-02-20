@@ -3,7 +3,7 @@ ini_set('display_errors', '0');
 session_start();
 
 $conn = mysqli_connect(
-    'localhost:3307',  // Assuming the same connection string works for all
+    'localhost:3307',
     'root',
     'koyuko1870!',
     'madang'
@@ -13,12 +13,11 @@ if (!$conn) {
     die('데이터베이스 연결 실패: ' . mysqli_connect_error());
 }
 
-// Common filtering function
 function filter_data($conn, $data) {
     return mysqli_real_escape_string($conn, $data);
 }
 
-if ($_POST["gg"] == 1) {  // 아침 (Morning)
+if ($_POST["morning"] == 1) {  // 아침 (Morning)
     $filtered = array(
         'user_id' => filter_data($conn, $_POST['username']),
         'food_name' => filter_data($conn, $_POST['foodname']),
@@ -39,7 +38,7 @@ if ($_POST["gg"] == 1) {  // 아침 (Morning)
         echo '오늘의 식단(아침)에 추가되었습니다. <a href="food.php">돌아가기</a>';
     }
 
-} elseif ($_POST["gg2"] == 2) {  // 점심 (Lunch)
+} elseif ($_POST["lunch"] == 2) {  // 점심 (Lunch)
     $filtered = array(
         'user_id' => filter_data($conn, $_POST['username']),
         'food_name' => filter_data($conn, $_POST['foodname']),
@@ -60,7 +59,7 @@ if ($_POST["gg"] == 1) {  // 아침 (Morning)
         echo '오늘의 식단(점심)에 추가되었습니다. <a href="food.php">돌아가기</a>';
     }
 
-} elseif ($_POST["gg3"] == 3) {  // 저녁 (Dinner)
+} elseif ($_POST["dinner"] == 3) {  // 저녁 (Dinner)
     $filtered = array(
         'user_id' => filter_data($conn, $_POST['username']),
         'food_name' => filter_data($conn, $_POST['foodname']),

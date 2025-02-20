@@ -1,0 +1,159 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Noto Sans KR", sans-serif;
+    background: linear-gradient(135deg, #eef2f3 0%, #cfd9df 100%);
+    color: #37474f;
+    padding: 20px;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 제목 스타일 */
+h2 {
+    font-size: 1.8em;
+    color: #37474F;
+    margin-bottom: 1rem;
+}
+
+/* 날짜 선택 */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 15px;
+    background: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0277bd;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #0288d1;
+    color: white;
+    font-weight: bold;
+}
+
+/* 초과 칼로리 표시 */
+.calorie-excess {
+    color: red;
+}
+
+.calorie-ok {
+    color: green;
+}
+
+/* 운동 정보 */
+.exercise-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.exercise-list li {
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+/* 캘린더로 돌아가기 링크 */
+.return-link a {
+    color: #0288d1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.return-link a:hover {
+    color: #01579b;
+}
+
+/* Modal styles */
+.modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
